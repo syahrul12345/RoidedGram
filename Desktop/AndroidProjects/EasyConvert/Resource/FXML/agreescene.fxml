@@ -6,9 +6,47 @@
 <?import javafx.scene.control.*?>
 <?import javafx.scene.layout.*?>
 
-<AnchorPane xmlns="http://javafx.com/javafx"
-            xmlns:fx="http://javafx.com/fxml"
-            fx:controller="FXML.Agreescene"
-            prefHeight="400.0" prefWidth="600.0">
+<?import javafx.scene.text.Text?>
+<?import javafx.geometry.Insets?>
+<GridPane xmlns="http://javafx.com/javafx"
+          xmlns:fx="http://javafx.com/fxml"
+          fx:controller="controller.agreeController"
+          fx:id="gridPane"
+          prefHeight="400.0" prefWidth="600.0"
+          hgap = "10"
+          vgap="10"
+          >
+    <padding><Insets top="10" right="10" bottom="10" left="10"/></padding>
 
-</AnchorPane>
+    <Text text = "Convert:"
+          GridPane.columnIndex ="0"
+          GridPane.rowIndex ="0" />
+    <TextField text = "Numbers only please "
+               GridPane.columnIndex="1"
+               GridPane.rowIndex = "0"
+
+              />
+    <Text text = "Input units:"
+          GridPane.columnIndex ="0"
+          GridPane.rowIndex ="1" />
+    <TextField text = "Numbers only please "
+               GridPane.columnIndex="1"
+               GridPane.rowIndex = "1"
+              />
+    <Text text = "Output units:"
+          GridPane.columnIndex ="0"
+          GridPane.rowIndex ="2" />
+    <TextField text = "Numbers only please "
+               GridPane.columnIndex="1"
+               GridPane.rowIndex = "2"
+               />
+    <Button text="Convert"
+            GridPane.columnIndex="3"
+            GridPane.rowIndex="1" />
+    <TextArea GridPane.columnIndex ="0"
+              GridPane.rowIndex = "3"
+              GridPane.columnSpan = "4"
+              minHeight="300"/>
+
+
+</GridPane>

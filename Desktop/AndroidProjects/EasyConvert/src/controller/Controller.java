@@ -43,7 +43,7 @@ public class Controller implements Initializable{
             col1.setFillWidth(true);
             col1.setHgrow(Priority.ALWAYS);
             gridPane.getColumnConstraints().add(col1);
-            gridPane.setPrefSize(700, 200);
+            gridPane.setPrefSize(700, 700);
         } catch (FileNotFoundException e) {
             tocTextArea.appendText("If you see this, the TOC wod document is gone for some reason");
         } catch (IOException e) {
@@ -52,9 +52,14 @@ public class Controller implements Initializable{
 
     }
 
-    public void agreeButtonClicked(ActionEvent actionEvent) {
+    public void agreeButtonClicked(ActionEvent actionEvent) throws IOException {
         Stage stage = (Stage) gridPane.getScene().getWindow();
         stage.close();
+        Parent root = FXMLLoader.load(getClass().getResource("/FXML/agreescene.fxml"));
+        Stage secondaryStage = new Stage();
+        secondaryStage.setTitle("Conversion Main");
+        secondaryStage.setScene(new Scene(root,500,450));
+        secondaryStage.show();
 
 
     }
