@@ -1,13 +1,17 @@
-package ui;
+package controller;
 
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
+import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
+import javafx.scene.Parent;
+import javafx.scene.Scene;
 import javafx.scene.control.Button;
 import javafx.scene.control.TextArea;
 import javafx.scene.layout.ColumnConstraints;
 import javafx.scene.layout.GridPane;
 import javafx.scene.layout.Priority;
+import javafx.stage.Stage;
 import org.apache.poi.xwpf.extractor.XWPFWordExtractor;
 import org.apache.poi.xwpf.usermodel.XWPFDocument;
 
@@ -23,10 +27,7 @@ public class Controller implements Initializable{
     private TextArea tocTextArea;
     @FXML
     private GridPane gridPane;
-    @FXML
-    private Button agreeBtn;
-    @FXML
-    private Button disagreeBtn;
+
 
 
     @Override
@@ -52,11 +53,15 @@ public class Controller implements Initializable{
     }
 
     public void agreeButtonClicked(ActionEvent actionEvent) {
-        System.out.println("Agree Button Clicked");
+
     }
 
-    public void disagreeButtonClicked(ActionEvent actionEvent) {
-        System.out.println("Disagree Button Clicked");
+    public void disagreeButtonClicked(ActionEvent actionEvent) throws IOException {
 
+        Parent root = FXMLLoader.load(getClass().getResource("/FXML/disagreescene.fxml"));
+        Stage secondaryStage = new Stage();
+        secondaryStage.setTitle("Closing");
+        secondaryStage.setScene(new Scene(root,210,100));
+        secondaryStage.show();
     }
 }
