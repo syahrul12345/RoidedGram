@@ -21,38 +21,42 @@
     <Text text = "Convert:"
           GridPane.columnIndex ="0"
           GridPane.rowIndex ="0" />
-    <TextField text = "Numbers only please "
+
+    <TextField promptText= "Numbers only please "
                fx:id = "value"
                GridPane.columnIndex="1"
-               GridPane.rowIndex = "0"
+               GridPane.rowIndex = "0"/>
 
-              />
     <Text text = "Input units:"
           GridPane.columnIndex ="0"
           GridPane.rowIndex ="1" />
-    <TextField text = "Numbers only please "
+
+    <TextField promptText= "units "
+               text="(m)(kg)(mm^-1)"
                fx:id="inUnits"
                GridPane.columnIndex="1"
-               GridPane.rowIndex = "1"
-              />
+               GridPane.rowIndex = "1"/>
+
     <Text text = "Output units:"
           GridPane.columnIndex ="0"
           GridPane.rowIndex ="2" />
-    <TextField text = "Numbers only please "
+
+    <TextField promptText= "units "
+               text="(a)(bc^2)(def)"
                fx:id="outUnits"
                GridPane.columnIndex="1"
-               GridPane.rowIndex = "2"
-               />
+               GridPane.rowIndex = "2"/>
+
     <Button text="Convert"
             fx:id="convertBtn"
             onAction="#convertBtnClicked"
             GridPane.columnIndex="3"
             GridPane.rowIndex="1" />
+
     <TextArea GridPane.columnIndex ="0"
               fx:id ="textArea"
               GridPane.rowIndex = "3"
               GridPane.columnSpan = "4"
               minHeight="300"/>
-
 
 </GridPane>

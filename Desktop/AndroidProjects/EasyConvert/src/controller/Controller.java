@@ -32,7 +32,7 @@ public class Controller implements Initializable{
 
     @Override
     public void initialize(URL location, ResourceBundle resources) {
-        File file = new File("/Users/muhdsyahrulnizam/Desktop/AndroidProjects/EasyConvert/src/model/toctext.docx");
+        File file = new File("/Users/muhdsyahrulnizam/Desktop/AndroidProjects/EasyConvert/src/model/documents/toctext.docx");
         FileInputStream fs = null;
         try {
             fs = new FileInputStream(file);
@@ -57,7 +57,7 @@ public class Controller implements Initializable{
         stage.close();
         Parent root = FXMLLoader.load(getClass().getResource("/FXML/agreescene.fxml"));
         Stage secondaryStage = new Stage();
-        secondaryStage.setTitle("Conversion Main");
+        secondaryStage.setTitle("Easy Convert");
         secondaryStage.setScene(new Scene(root,500,450));
         secondaryStage.show();
 
