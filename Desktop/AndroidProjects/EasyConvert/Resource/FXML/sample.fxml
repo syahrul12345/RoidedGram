@@ -1,0 +1,58 @@
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.layout.GridPane?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.text.Text?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.layout.HBox?>
+<GridPane fx:controller="ui.Controller"
+          fx:id="gridPane"
+          xmlns:fx="http://javafx.com/fxml"
+          stylesheets="/CSS/sample.css"
+
+          hgap="10"
+          vgap="10"
+          gridLinesVisible="true">
+    <padding><Insets top="10" right="10" bottom="10" left="10"/></padding>
+
+
+    <Text fx:id = "headerText"
+          text = "EasyConvert terms and Conditions"
+          GridPane.rowIndex="0"
+          GridPane.columnIndex="0"
+          GridPane.columnSpan="1"
+          GridPane.rowSpan="1"
+         />
+
+    <TextArea fx:id = "tocTextArea"
+                GridPane.rowIndex = "1"
+                GridPane.columnIndex = "0"
+                GridPane.columnSpan="1"
+                GridPane.rowSpan = "1"
+                GridPane.fillWidth="true"
+                editable="false"
+
+
+                />
+    <HBox fx:id = "Vbox"
+          GridPane.rowIndex="2"
+          GridPane.columnIndex="0"
+          alignment="CENTER">
+        <Button fx:id ="agreeBtn"
+                onAction="#agreeButtonClicked"
+                GridPane.rowIndex ="2"
+                GridPane.columnIndex="0"
+                text = "Agree" />
+
+        <Button fx:id ="disagreeBtn"
+                onAction="#disagreeButtonClicked"
+                GridPane.rowIndex ="2"
+                GridPane.columnIndex="1"
+                text = "Disagree" />
+    </HBox>
+
+
+</GridPane>
