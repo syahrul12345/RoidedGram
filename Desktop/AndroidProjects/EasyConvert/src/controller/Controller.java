@@ -53,6 +53,9 @@ public class Controller implements Initializable{
     }
 
     public void agreeButtonClicked(ActionEvent actionEvent) {
+        Stage stage = (Stage) gridPane.getScene().getWindow();
+        stage.close();
+
 
     }
 
