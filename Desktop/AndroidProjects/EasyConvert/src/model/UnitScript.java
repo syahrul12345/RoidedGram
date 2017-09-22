@@ -27,10 +27,5 @@ public class UnitScript {
         return unitListOut;
     }
 
-    public void clearIn() {
-        unitListIn.clear();
-    }
-    public void clearOut() {
-        unitListOut.clear();
-    }
+
 }

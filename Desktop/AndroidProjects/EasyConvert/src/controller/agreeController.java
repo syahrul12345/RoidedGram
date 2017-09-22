@@ -8,6 +8,7 @@ import javafx.scene.control.TextField;
 import javafx.scene.layout.ColumnConstraints;
 import javafx.scene.layout.GridPane;
 import javafx.scene.layout.Priority;
+import model.DimensionalAnalyzer;
 import model.UnitParser;
 import org.controlsfx.control.textfield.TextFields;
 
@@ -25,11 +26,13 @@ public class agreeController implements Initializable{
     @FXML private TextField outUnits;
     @FXML private TextArea textArea;
     private UnitParser unitParser;
+    private DimensionalAnalyzer dimensionalAnalyzer;
 
 
     @Override
     public void initialize(URL location, ResourceBundle resources) {
         unitParser = new UnitParser();
+        dimensionalAnalyzer = new DimensionalAnalyzer();
         ColumnConstraints col1 = new ColumnConstraints();
         col1.setFillWidth(true);
         col1.setHgrow(Priority.ALWAYS);
@@ -45,5 +48,8 @@ public class agreeController implements Initializable{
         String unitIn = inUnits.getText();
         String unitOut = outUnits.getText();
         unitParser.accept(unitIn,unitOut);
+
+        dimensionalAnalyzer.add(unitParser.getListIn(),unitParser.getListOut());
+
     }
 }

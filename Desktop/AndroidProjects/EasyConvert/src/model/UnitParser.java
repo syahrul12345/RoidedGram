@@ -1,5 +1,7 @@
 package model;
 
+import java.lang.reflect.Array;
+import java.util.ArrayList;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
@@ -7,6 +9,7 @@ public class UnitParser {
     private String unitIn;
     private String unitOut;
     private UnitScript unitScript;
+
 
     public void accept(String unitIn, String unitOut) {
 
@@ -32,5 +35,12 @@ public class UnitParser {
 
     }
 
+    public ArrayList<String> getListIn() {
+        return unitScript.getUnitListIn();
+    }
+
+    public ArrayList<String> getListOut() {
+        return unitScript.getUnitListOut();
+    }
 }
 
