@@ -1,7 +1,8 @@
 package model.enumerations;
 
-public enum length {
+public enum Panjang {
     m,
+
 
 
 }
