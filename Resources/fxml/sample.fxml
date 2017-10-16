@@ -1,0 +1,41 @@
+<?language javascript?>
+
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.control.Spinner?>
+<?import javafx.scene.layout.HBox?>
+
+
+<GridPane fx:controller="controller.Controller"
+          xmlns:fx="http://javafx.com/fxml" alignment="center" hgap="10" vgap="10"
+          gridLinesVisible="true">
+    <fx:script>
+        function handleCheckBoxAction(event) {
+        spinner.disable = (! spinner.disabled);
+        }
+
+    </fx:script>
+    <VBox fx:id = "vboxmain">
+        <HBox spacing="5"
+              fx:id="hbox">
+
+            <Label text="No of accounts to create:"/>
+            <Spinner fx:id = "spinner"
+                     initialValue="0"
+                     max="500"
+                     editable="true" />
+
+        </HBox>
+
+        <Button  fx:id ="spinnerBtn"
+                 onAction="#spinnerClicked"
+                 text = "Create Accounts"
+                 maxWidth="Infinity"/>
+
+
+    </VBox>
+
+
+</GridPane>
