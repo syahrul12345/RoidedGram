@@ -1,0 +1,13 @@
+<component name="libraryTable">
+  <library name="controlsfx-8.40.12">
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/Gluon Plugin/lib/controlsfx-8.40.12.jar!/" />
+      <root url="jar://$PROJECT_DIR$/Gluon Plugin/lib/freemarker-2.3.23.jar!/" />
+      <root url="jar://$PROJECT_DIR$/Gluon Plugin/lib/ide-plugin-templates-2.7.1.jar!/" />
+      <root url="jar://$PROJECT_DIR$/Gluon Plugin/lib/intellij-plugin-2.6.1.jar!/" />
+      <root url="jar://$PROJECT_DIR$/Gluon Plugin/lib/javax.json-1.0.4.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>

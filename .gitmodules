@@ -1,3 +1,6 @@
 [submodule "Documents/MATLAB/Chemhelper"]
 	path = Documents/MATLAB/Chemhelper
 	url = https://github.com/syahrul12345/Chemhelper.git
+[submodule "Desktop/Projects/NumericalAnalysisII"]
+	path = Desktop/Projects/NumericalAnalysisII
+	url = https://github.com/syahrul12345/NumericalAnalysisII.git
